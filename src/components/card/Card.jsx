@@ -70,17 +70,17 @@ function Carte() {
       {data.map((bougie, index) => {
         const [tailleChoisie, setTailleChoisie] = useState("Petite");
         return (
-          <div className="carte w-55" key={index}>
+          <div className="carte w-55 bg-white rounded-lg" key={index}>
             <img
               src={images[bougie.image]}
               alt={bougie.nom}
-              className=""
+              className="rounded-tl-lg rounded-tr-lg"
             />
-            <div className="p-2 bg-white">
+            <div className="p-3 flex flex-col gap-1">
               <h3 className="uppercase font-semibold title">{bougie.nom}</h3>
-              <p>{bougie.description}</p>
-              <div>
-                <label>
+              <p className="desc">{bougie.description}</p>
+              <div className="flex gap-5 items-center">
+                <label className="flex items-center gap-1">
                   <input
                   type="radio"
                   name={`taille-${index}`}
@@ -90,7 +90,7 @@ function Carte() {
                   />
                   Petite
                 </label>
-                <label>
+                <label className="flex items-center gap-1">
                   <input
                   type="radio"
                   name={`taille-${index}`}
@@ -112,16 +112,18 @@ function Carte() {
               }
               </div>
 
-              <div>
+              <div className="flex gap-10 mt-1">
                 <button
                   disabled={bougie.stock === 0}
                   onClick={() => ajouterAuPanier(bougie, tailleChoisie)}
+                  className="btn border-1 px-[9px] py-[2px] rounded-full cursor-pointer"
                 >
                   Ajouter
                 </button>
                 <button
                   disabled={!panier.find(item => item.id === bougie.id && item.taille === tailleChoisie)}
                   onClick={() => supprimerDuPanier(bougie, tailleChoisie)}
+                  className="btn border-1 px-[9px] py-[2px] rounded-full cursor-pointer"
                 >
                   Supprimer
                 </button>
