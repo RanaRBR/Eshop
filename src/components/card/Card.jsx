@@ -27,6 +27,7 @@ const images = {
 
 function Card() {
   const [panier, setPanier] = useState([]);
+//   const [euro, setEuro]= (150);
 
   const ajouterAuPanier = (bougie, tailleChoisie) => {
     if (bougie.stock > 0) {
@@ -152,3 +153,5 @@ function Card() {
 }
 
 export default Card;
+
+

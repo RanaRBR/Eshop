@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Header from './components/header/Header'
 import Boutons from './components/boutons/Boutons'
-import Carte from './components/card/Card'
 import './App.sass'
 import Card from './components/card/Card'
 
@@ -20,3 +19,6 @@ function App() {
 }
 
 export default App
+
+
+
