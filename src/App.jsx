@@ -11,8 +11,8 @@ function App() {
       <Header />
       <div className='everything p-20'>
         <Boutons />
+        <Card />
       </div>
-     <Card />
     </>
   )
 }
