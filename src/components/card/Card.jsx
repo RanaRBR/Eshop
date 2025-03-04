@@ -45,6 +45,26 @@ function Carte() {
     }
   };
 
+  const supprimerDuPanier = (bougie, tailleChoisie) => {
+    setPanier((panierPrecedent) => {
+      const articleExistant = panierPrecedent.find(item => item.id === bougie.id && item.taille === tailleChoisie);
+      if (articleExistant) {
+        if (articleExistant.quantite > 1) {
+          return panierPrecedent.map(item =>
+            item.id === bougie.id && item.taille === tailleChoisie
+              ? { ...item, quantite: item.quantite - 1 }
+              : item
+          );
+        } else {
+          return panierPrecedent.filter(item => item.id !== bougie.id || item.taille !== tailleChoisie);
+        }
+      }
+      return panierPrecedent;
+    });
+
+    bougie.stock += 1; 
+  };
+
   return (
     <div className="liste-produits">
       {data.map((bougie, index) => {
@@ -89,6 +109,12 @@ function Carte() {
               onClick={() => ajouterAuPanier(bougie, tailleChoisie)}
             >
               Ajouter
+            </button>
+            <button
+              disabled={!panier.find(item => item.id === bougie.id && item.taille === tailleChoisie)}
+              onClick={() => supprimerDuPanier(bougie, tailleChoisie)}
+            >
+              Supprimer
             </button>
           </div>
         );
