@@ -51,7 +51,7 @@
     "image": "national5"
   },
   {
-    "nom": "NO1. Acacia Flower",
+    "nom": "Acacia Flower",
     "prix1": 22.5,
     "prix2": 25.99,
     "description": "Une odeur gourmande et réconfortante de fleurs d'acacia.",
@@ -62,7 +62,7 @@
   },
 
   {
-    "nom": "NO.3 Autumn Apple ",
+    "nom": "Autumn Apple ",
     "prix1": 18.99,
     "prix2": 24.99,
     "description": "Un parfum apaisant et naturel inspiré du pommes et cannelle.",
@@ -72,7 +72,7 @@
     "image": "wood4"
   },
   {
-    "nom": "NO.4 Garden Rose",
+    "nom": "Garden Rose",
     "prix1": 21.0,
     "prix2": 24.99,
     "description": "Un mélange doux et gourmand de rose et de fleurs d'oranger.",
@@ -83,7 +83,7 @@
   },
 
   {
-    "nom": "NO.5 Lavender Hill",
+    "nom": "Lavender Hill",
     "prix1": 17.5,
     "prix2": 22.5,
     "description": "Un parfum rafraîchissant de lavande et vivifiant pour une touche de fraîcheur.",
@@ -93,7 +93,7 @@
     "image": "wood1"
   },
   {
-    "nom": "NO.6 Green Tea Field",
+    "nom": "Green Tea Field",
     "prix1": 19.99,
     "prix2": 23.99,
     "description": "Une bougie aux notes de thé vert.",
