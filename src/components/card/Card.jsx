@@ -25,11 +25,12 @@ const images = {
   national5,
 };
 
-function Card() {
+function Card({ euro, setEuro, panierCount, setPanierCount }) {
   const [panier, setPanier] = useState([]);
-  
   const ajouterAuPanier = (bougie, tailleChoisie) => {
-    if (bougie.stock > 0) {
+    const prix = tailleChoisie === "Petite" ? bougie.prix1 : bougie.prix2;
+
+    if (bougie.stock > 0 && euro >= prix) {
       setPanier((panierPrecedent) => {
         const articleExistant = panierPrecedent.find(
           (item) => item.id === bougie.id && item.taille === tailleChoisie
@@ -40,17 +41,18 @@ function Card() {
                 ? { ...item, quantite: item.quantite + 1 }
                 : item
             )
-          : [
-              ...panierPrecedent,
-              { id: bougie.id, taille: tailleChoisie, quantite: 1 },
-            ];
+          : [...panierPrecedent, { id: bougie.id, taille: tailleChoisie, quantite: 1 }];
       });
 
       bougie.stock -= 1;
+      setEuro((prevEuro) => Math.round((prevEuro - prix) * 100) / 100);
+      setPanierCount((prevCount) => prevCount + 1);
     }
   };
 
   const supprimerDuPanier = (bougie, tailleChoisie) => {
+    const prix = tailleChoisie === "Petite" ? bougie.prix1 : bougie.prix2;
+
     setPanier((panierPrecedent) => {
       const articleExistant = panierPrecedent.find(
         (item) => item.id === bougie.id && item.taille === tailleChoisie
@@ -72,6 +74,8 @@ function Card() {
     });
 
     bougie.stock += 1;
+    setEuro((prevEuro) => Math.round((prevEuro + prix) * 100) / 100);
+    setPanierCount((prevCount) => (prevCount > 0 ? prevCount - 1 : 0));
   };
 
   return (
@@ -120,7 +124,7 @@ function Card() {
                     <p className="rouge text-red-600">Stock indisponible</p>
                   ) : (
                     <p
-                      className={bougie.stock < 5 ? "text-orange-600" : ""}
+                      className={bougie.stock < 4 ? "text-orange-600" : ""}
                     >
                       Stock : <span>{bougie.stock}</span>
                     </p>
@@ -158,5 +162,3 @@ function Card() {
 }
 
 export default Card;
-
-

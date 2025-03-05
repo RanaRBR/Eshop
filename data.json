@@ -1,105 +1,115 @@
 [
   {
+    "id": 1,
     "nom": "Acacia Flower",
     "prix1": 22.5,
     "prix2": 25.99,
     "description": "Une odeur gourmande et réconfortante de fleurs d'acacia.",
     "taille1": "Petite",
     "taille2": "Grande",
-    "stock": 8,
+    "stock": 5,
     "image": "wood5"
   },
   
   {
+    "id": 2,
     "nom": "Autumn Apple ",
     "prix1": 18.99,
     "prix2": 24.99,
     "description": "Un parfum apaisant et naturel inspiré du pommes et cannelle.",
     "taille1": "Petite",
     "taille2": "Grande",
-    "stock": 20,
+    "stock": 7,
     "image": "wood4"
   },
   {
+    "id": 3,
     "nom": "Garden Rose",
     "prix1": 21.0,
     "prix2": 24.99,
     "description": "Un mélange doux et gourmand de rose et de fleurs d'oranger.",
     "taille1": "Petite",
     "taille2": "Grande",
-    "stock": 14,
+    "stock": 5,
     "image": "wood3"
   },
   
   {
+    "id": 4,
     "nom": "Lavender Hill",
     "prix1": 17.5,
     "prix2": 22.5,
     "description": "Un parfum de lavande pour une touche de fraîcheur.",
     "taille1": "Petite",
     "taille2": "Grande",
-    "stock": 22,
+    "stock": 2,
     "image": "wood1"
   },
   {
+    "id": 5,
     "nom": "Green Tea Field",
     "prix1": 19.99,
     "prix2": 23.99,
     "description": "Une bougie aux notes de thé vert qui vous fera voyager.",
     "taille1": "Petite",
     "taille2": "Grande",
-    "stock": 12,
+    "stock": 2,
     "image": "wood2"
   },
   {
+    "id": 6,
     "nom": "Glacier",
     "prix1": 15.99,
     "prix2": 19.99,
     "description": "Une bougie ambiance forest avec une touche sucrée. ",
     "taille1": "Petite",
     "taille2": "Grande",
-    "stock": 20,
+    "stock": 8,
     "image": "national1"
     
   },
   {
+    "id": 7,
     "nom": "Kootenay Love",
     "prix1": 18.5,
     "prix2": 22.99,
     "description": "Une bougie aux cranberry pour une ambiance apaisante.",
     "taille1": "Petite",
     "taille2": "Grande",
-    "stock": 15,
+    "stock": 6,
     "image": "national4"
   },
   {
+    "id": 8,
     "nom": "Banafe",
     "prix1": 14.99,
     "prix2": 19.99,
     "description": "Un parfum doux aux notes exotiques de noix de coco.",
     "taille1": "Petite",
     "taille2": "Grande",
-    "stock": 25,
+    "stock": 4,
     "image": "national3"
   },
   {
+    "id": 9,
     "nom": "Kootenay",
     "prix1": 14.99,
     "prix2": 22.99,
     "description": "Un parfum boisé et raffiné pour une touche d'élégance.",
     "taille1": "Petite",
     "taille2": "Grande",
-    "stock": 10,
+    "stock": 3,
     "image": "national2"
   },
   {
+    "id": 10,
     "nom": "Jasper",
     "prix1": 16.99,
     "prix2": 19.99,
     "description": "Une senteur florale pour une atmosphère douce.",
     "taille1": "Petite",
     "taille2": "Grande",
-    "stock": 18,
+    "stock": 4,
     "image": "national5"
   }
 ]
