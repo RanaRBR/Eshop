@@ -11,7 +11,7 @@ function Boutons({ euro, panierCount }) {
             <div className='relative cursor-pointer'>
                 <img src={cart} alt="Panier" className='w-7' />
                 {panierCount > 0 && (
-                    <span className='absolute top-0 right-0 bg-red-600 text-white text-xs px-2 rounded-full'>
+                    <span className='absolute top-3 left-4 bg-red-600 text-white text-xs px-2 rounded-full'>
                         {panierCount}
                     </span>
                 )}

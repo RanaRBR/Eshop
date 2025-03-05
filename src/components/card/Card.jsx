@@ -6,6 +6,7 @@ import national2 from "../../assets/national2.jpg";
 import national3 from "../../assets/national3.jpg";
 import national4 from "../../assets/national4.jpg";
 import national5 from "../../assets/national5.jpg";
+import national6 from '../../assets/national6.jpg'
 import wood1 from "../../assets/wood1.jpg";
 import wood2 from "../../assets/wood2.jpg";
 import wood3 from "../../assets/wood3.jpg";
@@ -23,6 +24,7 @@ const images = {
   national3,
   national4,
   national5,
+  national6,
 };
 
 function Card({ euro, setEuro, panierCount, setPanierCount }) {

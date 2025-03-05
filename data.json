@@ -24,7 +24,7 @@
   },
   {
     "id": 3,
-    "nom": "Garden Rose",
+    "nom": "Rose Garden",
     "prix1": 21.0,
     "prix2": 24.99,
     "description": "Un mélange doux et gourmand de rose et de fleurs d'oranger.",
@@ -81,7 +81,7 @@
   },
   {
     "id": 8,
-    "nom": "Banafe",
+    "nom": "Banfe",
     "prix1": 14.99,
     "prix2": 19.99,
     "description": "Un parfum doux aux notes exotiques de noix de coco.",
@@ -111,5 +111,16 @@
     "taille2": "Grande",
     "stock": 4,
     "image": "national5"
+  }, 
+  {
+    "id": 11,
+    "nom": "Yoho",
+    "prix1": 15.99,
+    "prix2": 19.99,
+    "description": "une bougie à la vanille qui offre un parfum réconfortant.",
+    "taille1": "Petite",
+    "taille2": "Grande",
+    "stock": 6,
+    "image": "national6"
   }
 ]
