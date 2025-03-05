@@ -1,56 +1,5 @@
 [
   {
-    "nom": "Glacier",
-    "prix1": 15.99,
-    "prix2": 19.99,
-    "description": "Une bougie ambiance forest avec une touche sucrée.",
-    "taille1": "Petite",
-    "taille2": "Grande",
-    "stock": 20,
-    "image": "national1"
-    
-  },
-  {
-    "nom": "Kootenay Love",
-    "prix1": 18.5,
-    "prix2": 22.99,
-    "description": "Une bougie aux cranberry pour une ambiance apaisante.",
-    "taille1": "Petite",
-    "taille2": "Grande",
-    "stock": 15,
-    "image": "national4"
-  },
-  {
-    "nom": "Banafe",
-    "prix1": 14.99,
-    "prix2": 19.99,
-    "description": "Un parfum doux aux notes exotiques et sucrées de noix de coco.",
-    "taille1": "Petite",
-    "taille2": "Grande",
-    "stock": 25,
-    "image": "national3"
-  },
-  {
-    "nom": "Kootenay",
-    "prix1": 14.99,
-    "prix2": 22.99,
-    "description": "Un parfum boisé et raffiné pour une touche d'élégance.",
-    "taille1": "Petite",
-    "taille2": "Grande",
-    "stock": 10,
-    "image": "national2"
-  },
-  {
-    "nom": "Jasper",
-    "prix1": 16.99,
-    "prix2": 19.99,
-    "description": "Une senteur florale et romantique pour une atmosphère douce.",
-    "taille1": "Petite",
-    "taille2": "Grande",
-    "stock": 18,
-    "image": "national5"
-  },
-  {
     "nom": "Acacia Flower",
     "prix1": 22.5,
     "prix2": 25.99,
@@ -86,7 +35,7 @@
     "nom": "Lavender Hill",
     "prix1": 17.5,
     "prix2": 22.5,
-    "description": "Un parfum rafraîchissant de lavande et vivifiant pour une touche de fraîcheur.",
+    "description": "Un parfum de lavande pour une touche de fraîcheur.",
     "taille1": "Petite",
     "taille2": "Grande",
     "stock": 22,
@@ -96,10 +45,61 @@
     "nom": "Green Tea Field",
     "prix1": 19.99,
     "prix2": 23.99,
-    "description": "Une bougie aux notes de thé vert.",
+    "description": "Une bougie aux notes de thé vert qui vous fera voyager.",
     "taille1": "Petite",
     "taille2": "Grande",
     "stock": 12,
     "image": "wood2"
+  },
+{
+    "nom": "Glacier",
+    "prix1": 15.99,
+    "prix2": 19.99,
+    "description": "Une bougie ambiance forest avec une touche sucrée. ",
+    "taille1": "Petite",
+    "taille2": "Grande",
+    "stock": 20,
+    "image": "national1"
+
+  },
+  {
+    "nom": "Kootenay Love",
+    "prix1": 18.5,
+    "prix2": 22.99,
+    "description": "Une bougie aux cranberry pour une ambiance apaisante.",
+    "taille1": "Petite",
+    "taille2": "Grande",
+    "stock": 15,
+    "image": "national4"
+  },
+  {
+    "nom": "Banafe",
+    "prix1": 14.99,
+    "prix2": 19.99,
+    "description": "Un parfum doux aux notes exotiques de noix de coco.",
+    "taille1": "Petite",
+    "taille2": "Grande",
+    "stock": 25,
+    "image": "national3"
+  },
+  {
+    "nom": "Kootenay",
+    "prix1": 14.99,
+    "prix2": 22.99,
+    "description": "Un parfum boisé et raffiné pour une touche d'élégance.",
+    "taille1": "Petite",
+    "taille2": "Grande",
+    "stock": 10,
+    "image": "national2"
+  },
+  {
+    "nom": "Jasper",
+    "prix1": 16.99,
+    "prix2": 19.99,
+    "description": "Une senteur florale pour une atmosphère douce.",
+    "taille1": "Petite",
+    "taille2": "Grande",
+    "stock": 18,
+    "image": "national5"
   }
 ]

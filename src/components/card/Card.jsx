@@ -1,28 +1,28 @@
 import React, { useState } from "react";
 import "./Card.sass";
 import data from "../../../data.json";
-import national1 from "../../assets/national1.jpg";
-import national2 from "../../assets/national2.jpg";
-import national3 from "../../assets/national3.jpg";
-import national4 from "../../assets/national4.jpg";
-import national5 from "../../assets/national5.jpg";
 import wood1 from "../../assets/wood1.jpg";
 import wood2 from "../../assets/wood2.jpg";
 import wood3 from "../../assets/wood3.jpg";
 import wood4 from "../../assets/wood4.jpg";
 import wood5 from "../../assets/wood5.jpg";
+import national1 from "../../assets/national1.jpg";
+import national2 from "../../assets/national2.jpg";
+import national3 from "../../assets/national3.jpg";
+import national4 from "../../assets/national4.jpg";
+import national5 from "../../assets/national5.jpg";
 
 const images = {
-  national1,
-  national2,
-  national3,
-  national4,
-  national5,
   wood1,
   wood2,
   wood3,
   wood4,
   wood5,
+  national1,
+  national2,
+  national3,
+  national4,
+  national5,
 };
 
 function Card({ euro, setEuro, panierCount, setPanierCount }) {
@@ -152,3 +152,5 @@ function Card({ euro, setEuro, panierCount, setPanierCount }) {
 }
 
 export default Card;
+
+

@@ -3,6 +3,7 @@ import Header from './components/header/Header';
 import Boutons from './components/boutons/Boutons';
 import './App.sass';
 import Card from './components/card/Card';
+import SideBar from './components/sideBar/SideBar';
 
 function App() {
   const [euro, setEuro] = useState(150);
@@ -10,11 +11,14 @@ function App() {
 
   return (
     <>
+
       <Header />
+
       <div className='everything p-20'>
-        <Boutons euro={euro} panierCount={panierCount} />
+        <div><SideBar/></div>
+        <Boutons key={panierCount} euro={euro} panierCount={panierCount} />
         <Card euro={euro} setEuro={setEuro} panierCount={panierCount} setPanierCount={setPanierCount} />
-      </div>
+       </div>
     </>
   );
 }
