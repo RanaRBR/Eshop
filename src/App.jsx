@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className='everything flex '>
+      <div className='everything flex' >
         <div className='p-20'>
           <Boutons key={panierCount} euro={euro} panierCount={panierCount} />
           <Card euro={euro} setEuro={setEuro} panierCount={panierCount} setPanierCount={setPanierCount} />
