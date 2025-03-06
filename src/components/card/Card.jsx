@@ -7,11 +7,7 @@ import national3 from "../../assets/national3.jpg";
 import national4 from "../../assets/national4.jpg";
 import national5 from "../../assets/national5.jpg";
 import national6 from '../../assets/national6.jpg'
-import wood1 from "../../assets/wood1.jpg";
-import wood2 from "../../assets/wood2.jpg";
-import wood3 from "../../assets/wood3.jpg";
-import wood4 from "../../assets/wood4.jpg";
-import wood5 from "../../assets/wood5.jpg";
+
 
 const images = {
   wood1,
@@ -27,23 +23,23 @@ const images = {
   national6,
 };
 
-function Card({ euro, setEuro, panierCount, setPanierCount }) {
-  const [panier, setPanier] = useState([]);
+function Card({ euro, setEuro, panier, setPanier, panierCount, setPanierCount }) {
+  
   const ajouterAuPanier = (bougie, tailleChoisie) => {
     const prix = tailleChoisie === "Petite" ? bougie.prix1 : bougie.prix2;
 
     if (bougie.stock > 0 && euro >= prix) {
-      setPanier((panierPrecedent) => {
-        const articleExistant = panierPrecedent.find(
+      setPanier((prevPanier) => {
+        const articleExistant = prevPanier.find(
           (item) => item.id === bougie.id && item.taille === tailleChoisie
         );
         return articleExistant
-          ? panierPrecedent.map((item) =>
+          ? prevPanier.map((item) =>
               item.id === bougie.id && item.taille === tailleChoisie
                 ? { ...item, quantite: item.quantite + 1 }
                 : item
             )
-          : [...panierPrecedent, { id: bougie.id, taille: tailleChoisie, quantite: 1 }];
+          : [...prevPanier, { id: bougie.id, nom: bougie.nom, taille: tailleChoisie, quantite: 1, prix }];
       });
 
       bougie.stock -= 1;
@@ -52,45 +48,13 @@ function Card({ euro, setEuro, panierCount, setPanierCount }) {
     }
   };
 
-  const supprimerDuPanier = (bougie, tailleChoisie) => {
-    const prix = tailleChoisie === "Petite" ? bougie.prix1 : bougie.prix2;
-
-    setPanier((panierPrecedent) => {
-      const articleExistant = panierPrecedent.find(
-        (item) => item.id === bougie.id && item.taille === tailleChoisie
-      );
-      if (articleExistant) {
-        if (articleExistant.quantite > 1) {
-          return panierPrecedent.map((item) =>
-            item.id === bougie.id && item.taille === tailleChoisie
-              ? { ...item, quantite: item.quantite - 1 }
-              : item
-          );
-        } else {
-          return panierPrecedent.filter(
-            (item) => item.id !== bougie.id || item.taille !== tailleChoisie
-          );
-        }
-      }
-      return panierPrecedent;
-    });
-
-    bougie.stock += 1;
-    setEuro((prevEuro) => Math.round((prevEuro + prix) * 100) / 100);
-    setPanierCount((prevCount) => (prevCount > 0 ? prevCount - 1 : 0));
-  };
-
   return (
     <div className="liste-produits flex flex-wrap justify-center gap-15 pt-15">
       {data.map((bougie, index) => {
         const [tailleChoisie, setTailleChoisie] = useState("Petite");
         return (
           <div className="carte w-55 bg-white rounded-lg" key={index}>
-            <img
-              src={images[bougie.image]}
-              alt={bougie.nom}
-              className="rounded-tl-lg rounded-tr-lg"
-            />
+            <img src={images[bougie.image]} alt={bougie.nom} className="rounded-tl-lg rounded-tr-lg" />
             <div className="p-2 flex flex-col gap-1">
               <div className="p-2 bg-white">
                 <h3 className="uppercase font-semibold title">{bougie.nom}</h3>
@@ -117,17 +81,12 @@ function Card({ euro, setEuro, panierCount, setPanierCount }) {
                     Grande
                   </label>
                 </div>
-                <p>
-                  Prix :{" "}
-                  {tailleChoisie === "Petite" ? bougie.prix1 : bougie.prix2}€
-                </p>
+                <p>Prix : {tailleChoisie === "Petite" ? bougie.prix1 : bougie.prix2}€</p>
                 <div>
                   {bougie.stock === 0 ? (
                     <p className="rouge text-red-600">Stock indisponible</p>
                   ) : (
-                    <p
-                      className={bougie.stock < 4 ? "text-orange-600" : ""}
-                    >
+                    <p className={bougie.stock < 4 ? "text-orange-600" : ""}>
                       Stock : <span>{bougie.stock}</span>
                     </p>
                   )}
@@ -140,18 +99,6 @@ function Card({ euro, setEuro, panierCount, setPanierCount }) {
                     className="btn border-1 px-[9px] py-[2px] rounded-full cursor-pointer"
                   >
                     Ajouter
-                  </button>
-                  <button
-                    disabled={
-                      !panier.find(
-                        (item) =>
-                          item.id === bougie.id && item.taille === tailleChoisie
-                      )
-                    }
-                    onClick={() => supprimerDuPanier(bougie, tailleChoisie)}
-                    className="btn border-1 px-[9px] py-[2px] rounded-full cursor-pointer"
-                  >
-                    Supprimer
                   </button>
                 </div>
               </div>
