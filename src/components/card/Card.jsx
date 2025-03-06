@@ -7,7 +7,11 @@ import national3 from "../../assets/national3.jpg";
 import national4 from "../../assets/national4.jpg";
 import national5 from "../../assets/national5.jpg";
 import national6 from '../../assets/national6.jpg'
-
+import wood1 from "../../assets/wood1.jpg";
+import wood2 from "../../assets/wood2.jpg";
+import wood3 from "../../assets/wood3.jpg";
+import wood4 from "../../assets/wood4.jpg";
+import wood5 from "../../assets/wood5.jpg";
 
 const images = {
   wood1,
