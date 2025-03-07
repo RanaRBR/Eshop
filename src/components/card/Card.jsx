@@ -63,7 +63,7 @@ function Card({ euro, setEuro, panier, setPanier, panierCount, setPanierCount, p
       {produits.map((bougie, index) => {
         const [tailleChoisie, setTailleChoisie] = useState("Petite");
         return (
-        <div className="carte w-75 bg-white rounded-lg" key={index}>
+          <div className="carte w-75 bg-white rounded-lg" key={index}>
             <img src={images[bougie.image]} alt={bougie.nom} className="rounded-tl-lg rounded-tr-lg" />
             <div className="p-2 flex flex-col gap-1">
               <div className="p-2 bg-white">
