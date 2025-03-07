@@ -12,14 +12,14 @@ function Sidebar({ panier, supprimerUnProduit, supprimerToutProduit, showSidebar
         panier.map((item, index) => (
           <div key={index} className="cart-item flex flex-col p-2 rounded-xl">
             <div>
-               <p className="text-2xl text-emerald-900 font-semibold">{item.nom} </p> 
+               <p className="text-2xl text-orange-300 font-semibold">{item.nom} </p> 
                <p>{item.taille} - {item.quantite}</p>
             </div>
             <div className="flex gap-5">
-              <button onClick={() => supprimerUnProduit(item)} className="border-1 py-1 px-2 rounded-full mt-2 cursor-pointer">
+              <button onClick={() => supprimerUnProduit(item)} className="border-1 py-1 px-2 rounded-full mt-2 cursor-pointer btn-panier">
                 Supprimer
               </button>
-              <button onClick={() => supprimerToutProduit(item)} className="border-1 py-1 px-2 rounded-full mt-2 cursor-pointer">
+              <button onClick={() => supprimerToutProduit(item)} className="border-1 py-1 px-2 rounded-full mt-2 cursor-pointer btn-panier">
                 Rendre
               </button>
             </div>

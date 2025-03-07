@@ -102,11 +102,11 @@ function Card({ euro, setEuro, panier, setPanier, panierCount, setPanierCount, p
                   )}
                 </div>
 
-                <div className="flex gap-10 mt-1">
+                <div className="flex gap-10 justify-center mt-2">
                   <button
                     disabled={bougie.stock === 0}
                     onClick={() => ajouterAuPanier(bougie, tailleChoisie)}
-                    className="btn border-1 px-[9px] py-[2px] rounded-full cursor-pointer"
+                    className="btn-ajouter border-1 px-[9px] py-[2px] rounded-full cursor-pointer w-full text-xl"
                   >
                     Ajouter
                   </button>
