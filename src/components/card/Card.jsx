@@ -27,7 +27,7 @@ const images = {
   national6,
 };
 
-function Card({ euro, setEuro, panier, setPanier, panierCount, setPanierCount }) {
+function Card({ euro, setEuro, panier, setPanier, panierCount, setPanierCount, produits, setProduits }) {
   
   const ajouterAuPanier = (bougie, tailleChoisie) => {
     const prix = tailleChoisie === "Petite" ? bougie.prix1 : bougie.prix2;
@@ -46,7 +46,13 @@ function Card({ euro, setEuro, panier, setPanier, panierCount, setPanierCount })
           : [...prevPanier, { id: bougie.id, nom: bougie.nom, taille: tailleChoisie, quantite: 1, prix }];
       });
 
-      bougie.stock -= 1;
+      setProduits((prevProduits) =>
+        prevProduits.map((item) =>
+          item.id === bougie.id
+            ? { ...item, stock: item.stock - 1 }
+            : item
+        )
+      );
       setEuro((prevEuro) => Math.round((prevEuro - prix) * 100) / 100);
       setPanierCount((prevCount) => prevCount + 1);
     }
@@ -54,14 +60,14 @@ function Card({ euro, setEuro, panier, setPanier, panierCount, setPanierCount })
 
   return (
     <div className="liste-produits flex flex-wrap justify-center gap-15 pt-15">
-      {data.map((bougie, index) => {
+      {produits.map((bougie, index) => {
         const [tailleChoisie, setTailleChoisie] = useState("Petite");
         return (
           <div className="carte w-55 bg-white rounded-lg" key={index}>
             <img src={images[bougie.image]} alt={bougie.nom} className="rounded-tl-lg rounded-tr-lg" />
             <div className="p-2 flex flex-col gap-1">
               <div className="p-2 bg-white">
-                <h3 className="uppercase font-semibold title">{bougie.nom}</h3>
+                <h3 className="uppercase font-semibold titles">{bougie.nom}</h3>
                 <p className="desc">{bougie.description}</p>
                 <div className="flex gap-5 items-center">
                   <label className="flex items-center gap-1">

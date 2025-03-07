@@ -2,13 +2,13 @@ import './Boutons.sass'
 import cart from '../../assets/shopping-cart.png'
 import euroIcon from '../../assets/euro.png'
 
-function Boutons({ euro, panierCount }) {
+function Boutons({ euro, panierCount, toggleSidebar }) {
     return (
         <div className='flex justify-center items-center gap-15'>
             <p className='uppercase text-3xl m-0 cursor-pointer'>home</p>
             <p className='uppercase text-3xl m-0 cursor-pointer'>eshop</p>
 
-            <div className='relative cursor-pointer'>
+            <div className='relative cursor-pointer' onClick={toggleSidebar}>
                 <img src={cart} alt="Panier" className='w-7' />
                 {panierCount > 0 && (
                     <span className='absolute top-3 left-4 bg-red-600 text-white text-xs px-2 rounded-full'>

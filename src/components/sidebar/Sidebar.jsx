@@ -1,30 +1,35 @@
-import React from "react";
-import "./SideBar.sass";
+import React,{ useState } from "react";
+import "./Sidebar.sass";
 
-function SideBar({ panier, supprimerUnProduit, supprimerToutProduit }) {
+function Sidebar({ panier, supprimerUnProduit, supprimerToutProduit, showSidebar }) {
   return (
-    <div className="sideBar text-white">
-      <h2 className="title">🛒 Panier</h2>
+    <div className={`sideBar flex flex-col gap-4 text-white ${showSidebar ? 'translate-x-0' : 'translate-x-full'}`}>
+      <h2 className="title uppercase font-semibold">Panier</h2>
 
       {panier.length === 0 ? (
-        <p className="empty">Votre panier est vide.</p>
+        <p className="text-neutral-400">Votre panier est vide.</p>
       ) : (
         panier.map((item, index) => (
-          <div key={index} className="cart-item">
-            <p>
-              {item.nom} ({item.taille}) - {item.quantite}
-            </p>
-            <div className="buttons">
-              <button onClick={() => supprimerUnProduit(item)}>➖</button>
-              <button onClick={() => supprimerToutProduit(item)}>🗑️</button>
+          <div key={index} className="cart-item flex flex-col p-2 rounded-xl">
+            <div>
+               <p className="text-2xl text-emerald-900 font-semibold">{item.nom} </p> 
+               <p>{item.taille} - {item.quantite}</p>
+            </div>
+            <div className="flex gap-5">
+              <button onClick={() => supprimerUnProduit(item)} className="border-1 py-1 px-2 rounded-full mt-2 cursor-pointer">
+                Supprimer
+              </button>
+              <button onClick={() => supprimerToutProduit(item)} className="border-1 py-1 px-2 rounded-full mt-2 cursor-pointer">
+                Rendre
+              </button>
             </div>
           </div>
         ))
       )}
 
-      {panier.length > 0 && <button className="pay-btn">💳 Payer</button>}
+      {panier.length > 0 && <button className="pay-btn rounded-2xl p-1">Payer</button>}
     </div>
   );
 }
 
-export default SideBar;
+export default Sidebar;
